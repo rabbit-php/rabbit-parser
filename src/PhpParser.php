@@ -8,6 +8,10 @@
 
 namespace rabbit\parser;
 
+/**
+ * Class PhpParser
+ * @package rabbit\parser
+ */
 class PhpParser implements ParserInterface
 {
     /**

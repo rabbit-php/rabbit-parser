@@ -2,6 +2,10 @@
 
 namespace rabbit\parser;
 
+/**
+ * Class MsgPackParser
+ * @package rabbit\parser
+ */
 class MsgPackParser implements ParserInterface
 {
     /**

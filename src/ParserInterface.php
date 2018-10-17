@@ -8,6 +8,10 @@
 
 namespace rabbit\parser;
 
+/**
+ * Interface ParserInterface
+ * @package rabbit\parser
+ */
 interface ParserInterface
 {
     /**

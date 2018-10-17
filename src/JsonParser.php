@@ -8,6 +8,10 @@
 
 namespace rabbit\parser;
 
+/**
+ * Class JsonParser
+ * @package rabbit\parser
+ */
 class JsonParser implements ParserInterface
 {
     /**
@@ -55,7 +59,7 @@ class JsonParser implements ParserInterface
     /**
      * @param bool $assoc
      */
-    public function setAssoc($assoc)
+    public function setAssoc($assoc): void
     {
         $this->assoc = (bool)$assoc;
     }

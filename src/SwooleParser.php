@@ -4,6 +4,10 @@ namespace rabbit\parser;
 
 use Swoole\Serialize;
 
+/**
+ * Class SwooleParser
+ * @package rabbit\parser
+ */
 class SwooleParser implements ParserInterface
 {
     /**

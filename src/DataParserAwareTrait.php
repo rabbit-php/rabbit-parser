@@ -2,6 +2,10 @@
 
 namespace rabbit\parser;
 
+/**
+ * Trait DataParserAwareTrait
+ * @package rabbit\parser
+ */
 trait DataParserAwareTrait
 {
     /**
@@ -24,7 +28,7 @@ trait DataParserAwareTrait
     /**
      * @param ParserInterface $parser
      */
-    public function setParser(ParserInterface $parser)
+    public function setParser(ParserInterface $parser): void
     {
         $this->parser = $parser;
     }
