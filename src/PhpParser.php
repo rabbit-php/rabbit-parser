@@ -15,12 +15,25 @@ namespace rabbit\parser;
 class PhpParser implements ParserInterface
 {
     /**
+     * @var bool whether [igbinary serialization](https://pecl.php.net/package/igbinary) is available or not.
+     */
+    private $igbinaryAvailable = false;
+
+    /**
+     * PhpParser constructor.
+     */
+    public function __construct()
+    {
+        $this->igbinaryAvailable = \extension_loaded('igbinary');
+    }
+
+    /**
      * @param mixed $data
      * @return string
      */
     public function encode($data): string
     {
-        return \serialize($data);
+        return $this->igbinaryAvailable ? \igbinary_serialize($data) : \serialize($data);
     }
 
     /**
@@ -29,6 +42,7 @@ class PhpParser implements ParserInterface
      */
     public function decode(string $data)
     {
-        return \unserialize($data, ['allowed_classes' => false]);
+        return $this->igbinaryAvailable ? \igbinary_unserialize($data) : \unserialize($data,
+            ['allowed_classes' => false]);
     }
 }
