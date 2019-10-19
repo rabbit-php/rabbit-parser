@@ -42,7 +42,9 @@ class PhpParser implements ParserInterface
      */
     public function decode(string $data)
     {
-        return $this->igbinaryAvailable ? \igbinary_unserialize($data) : \unserialize($data,
-            ['allowed_classes' => false]);
+        return $this->igbinaryAvailable ? \igbinary_unserialize($data) : \unserialize(
+            $data,
+            ['allowed_classes' => false]
+        );
     }
 }
