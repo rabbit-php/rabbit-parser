@@ -1,17 +1,18 @@
 <?php
+declare(strict_types=1);
 
-namespace rabbit\parser;
+namespace Rabbit\Parser;
 
 /**
  * Trait DataParserAwareTrait
- * @package rabbit\parser
+ * @package Rabbit\Parser
  */
 trait DataParserAwareTrait
 {
     /**
      * @var ParserInterface
      */
-    private $parser;
+    private ParserInterface $parser;
 
     /**
      * @return ParserInterface

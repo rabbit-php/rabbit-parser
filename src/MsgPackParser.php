@@ -1,6 +1,9 @@
 <?php
+declare(strict_types=1);
 
-namespace rabbit\parser;
+namespace Rabbit\Parser;
+
+use RuntimeException;
 
 /**
  * Class MsgPackParser
@@ -10,12 +13,12 @@ class MsgPackParser implements ParserInterface
 {
     /**
      * class constructor.
-     * @throws \RuntimeException
+     * @throws RuntimeException
      */
     public function __construct()
     {
         if (!\function_exists('msgpack_pack')) {
-            throw new \RuntimeException("The php extension 'msgpack' is required!");
+            throw new RuntimeException("The php extension 'msgpack' is required!");
         }
     }
 

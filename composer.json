@@ -1,17 +1,25 @@
 {
-    "name": "rabbit/parser",
-    "description": "rabbit parser",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "albert",
-            "email": "63851587@qq.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "rabbit\\parser\\": "src/"
-        }
+  "name": "rabbit/parser",
+  "description": "rabbit parser",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "albert",
+      "email": "63851587@qq.com"
     }
+  ],
+  "require": {
+    "php": ">=7.4.0"
+  },
+  "suggest": {
+    "ext-json": "*",
+    "ext-igbinary": "*",
+    "ext-msgpack": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "rabbit\\parser\\": "src/"
+    }
+  }
 }

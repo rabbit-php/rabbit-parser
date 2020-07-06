@@ -1,23 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: inhere
- * Date: 2017-12-14
- * Time: 19:07
- */
+declare(strict_types=1);
 
-namespace rabbit\parser;
+namespace Rabbit\Parser;
 
 /**
  * Class PhpParser
- * @package rabbit\parser
+ * @package Rabbit\Parser
  */
 class PhpParser implements ParserInterface
 {
     /**
      * @var bool whether [igbinary serialization](https://pecl.php.net/package/igbinary) is available or not.
      */
-    private $igbinaryAvailable = false;
+    private bool $igbinaryAvailable = false;
 
     /**
      * PhpParser constructor.

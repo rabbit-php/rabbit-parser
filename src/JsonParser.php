@@ -1,23 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: inhere
- * Date: 2017-12-14
- * Time: 19:07
- */
+declare(strict_types=1);
 
-namespace rabbit\parser;
+namespace Rabbit\Parser;
 
 /**
  * Class JsonParser
- * @package rabbit\parser
+ * @package Rabbit\Parser
  */
 class JsonParser implements ParserInterface
 {
     /**
      * @var bool
      */
-    protected $assoc = true;
+    protected bool $assoc = true;
 
     /**
      * JsonParser constructor.
@@ -59,8 +54,8 @@ class JsonParser implements ParserInterface
     /**
      * @param bool $assoc
      */
-    public function setAssoc($assoc): void
+    public function setAssoc(bool $assoc): void
     {
-        $this->assoc = (bool)$assoc;
+        $this->assoc = $assoc;
     }
 }
