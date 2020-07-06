@@ -7,7 +7,7 @@ use RuntimeException;
 
 /**
  * Class MsgPackParser
- * @package rabbit\parser
+ * @package Rabbit\Parser
  */
 class MsgPackParser implements ParserInterface
 {
