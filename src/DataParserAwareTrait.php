@@ -20,7 +20,7 @@ trait DataParserAwareTrait
     public function getParser(): ParserInterface
     {
         if (!$this->parser) {
-            $this->parser = new PhpParser();
+            $this->parser = create(PhpParser::class);
         }
 
         return $this->parser;
