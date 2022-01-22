@@ -8,7 +8,7 @@ class MsgPackParser implements ParserInterface
 {
     private bool $hasMsgPack = false;
 
-    public function __construct()
+    public function __construct(private bool $allowed = true)
     {
         $this->hasMsgPack = \extension_loaded('msgpack');
     }
@@ -20,6 +20,6 @@ class MsgPackParser implements ParserInterface
 
     public function decode(string $data)
     {
-        return $this->hasMsgPack ? \msgpack_unpack($data) : unserialize($data);
+        return $this->hasMsgPack ? \msgpack_unpack($data) : unserialize($data, ['allowed_classes' => $this->allowed]);
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Rabbit\Parser;
@@ -20,17 +21,9 @@ trait DataParserAwareTrait
     public function getParser(): ParserInterface
     {
         if (!$this->parser) {
-            $this->parser = create(PhpParser::class);
+            $this->parser = new MsgPackParser(false);
         }
 
         return $this->parser;
-    }
-
-    /**
-     * @param ParserInterface $parser
-     */
-    public function setParser(ParserInterface $parser): void
-    {
-        $this->parser = $parser;
     }
 }
