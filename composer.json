@@ -15,7 +15,6 @@
   },
   "suggest": {
     "ext-json": "*",
-    "ext-igbinary": "*",
     "ext-msgpack": "*"
   },
   "autoload": {
